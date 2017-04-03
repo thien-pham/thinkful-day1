@@ -1,7 +1,25 @@
 
 function WhoAmI(name, last,age){
-  console.log(`Hi, my  name is ${name} ${last}`);
-  console.log(yearOfBirth(age));
+  try{
+    if(name === typeof('undefined') ||
+      last === typeof('undefined') ||
+      typeof(name) !== 'string' ||
+      typeof(last) !== 'string' ||
+      typeof(age) !== 'number')
+      {
+        
+        throw new Error("Arguments not valid");
+    }
+    else{
+      console.log(`Hi, my  name is ${name} ${last}`);
+      console.log(yearOfBirth(age));
+    }
+  }catch(err){
+    console.log(err.message);
+  }
+
+
+
 }
 
 
@@ -17,5 +35,11 @@ function yearOfBirth(age){
   }
   return 2017 - age;
 }
-
-WhoAmI("George", "Orwell", -100);
+console.log("1");
+WhoAmI("sdf","sdff", 20);
+console.log("2");
+WhoAmI("asdf",20, 20);
+console.log("3");
+WhoAmI(20,"d",20);
+console.log("4");
+WhoAmI("20","d","test");
