@@ -1,8 +1,12 @@
 
 function WhoAmI(name, last,age){
-  let dOB = 2017-age;
   console.log(`Hi, my  name is ${name} ${last}`);
-  console.log(`I was born in ${dOB}`)
+
+  console.log(yearOfBirth(12));
 }
 
-WhoAmI("George", "Orwell", 999);
+function yearOfBirth(age){
+  return 2017 - age;
+}
+
+WhoAmI("George", "Orwell", 100);
