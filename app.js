@@ -1,7 +1,7 @@
 
-function WhoAmI(){
-  let str= 'Hi, my name is Chris and I\'m 29 years old';
+function WhoAmI(name, age){
+  let str= `Hi, my  name is ${name} ${age}`;
   console.log(str);
 }
 
-WhoAmI();
+WhoAmI("George", "Orwell");
